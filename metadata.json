@@ -1,0 +1,6 @@
+{
+  "name": "Le Fardeau et le Chemin",
+  "description": "Présentation immersive du roman littéraire « Le Fardeau et le Chemin », un récit contemporain d'inspiration japonaise et philosophique sur la route du Tōkaidō.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

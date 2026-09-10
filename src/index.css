@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-lacquer-dark: #141210;
+    --bg-lacquer-card: #1A1613;
+    --bg-lacquer-elevated: #221D18;
+    --vermilion: #963532;
+    --vermilion-glow: #b9423e;
+    --gold-ancient: #C5A880;
+    --gold-bright: #D4AF37;
+    --washi-paper: #FAF4EB;
+    --washi-muted: #E8DDD0;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #141210;
+    color: #FAF4EB;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, 'Noto Serif JP', serif;
+  }
+
+  .font-display {
+    font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-kanji {
+    font-family: 'Noto Serif JP', serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #141210;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a231d;
+  border-radius: 3px;
+  border: 1px solid rgba(197, 168, 128, 0.15);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #963532;
+}
+
+/* Japanese Writing Modes */
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.2em;
+}
+
+/* Wabi Sabi Lacquer & Gold gradients */
+.bg-lacquer-pattern {
+  background-color: #141210;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(150, 53, 50, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(197, 168, 128, 0.04) 0%, transparent 50%),
+    linear-gradient(to bottom, #141210 0%, #1A1613 50%, #141210 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FAF4EB 0%, #D4AF37 50%, #C5A880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border-color: rgba(197, 168, 128, 0.25);
+}
+
+.gold-border-glow {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.12);
+}
+
+/* 3D Book styling */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Shimmer animation */
+@keyframes goldShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer {
+  animation: goldShimmer 3.5s infinite ease-in-out;
+}
+
